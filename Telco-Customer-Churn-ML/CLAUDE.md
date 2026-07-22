@@ -55,7 +55,7 @@ This project implements a complete MLOps pipeline with two distinct phases:
 2. Feature processing mirrors training-time transformations for consistency
 
 ### MLflow Integration Patterns
-- **Experiment Name**: "Telco Churn" (default, can be overridden)
+- **Experiment Name**: "Telco Churn" 
 - **Tracking URI**: File-based at `{project_root}/mlruns`
 - **Logged Artifacts**: `model/`, `feature_columns.txt`, `preprocessing.pkl`
 - **Tracked Metrics**: precision, recall, f1, roc_auc, train_time, pred_time, data_quality_pass
@@ -93,7 +93,7 @@ Critical pattern: Training and serving must use identical feature transformation
 
 ### CI/CD Pipeline
 - **Trigger**: Push to main branch
-- **Actions**: Build Docker image → Push to Docker Hub (`anasriad8/telco-fastapi:latest`)
+- **Actions**: Build Docker image → Push to Docker Hub 
 - **Requirements**: `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN` secrets
 - **Deployment**: Manual ECS service update (AWS Fargate + ALB)
 
